@@ -34,12 +34,48 @@ public class Permutations {
 	 * 
 	 * The base case is when the input is an empty string the only permutation
 	 * is the empty string.
+	 * 
+	 * First take out the first char from String and permute the remaining chars
+	 * If String = “123” 
+	 * 
+	 * First char = 1 and remaining chars permutations are 23 and 32. 
+	 * 
+	 * Now we can insert first char in the available positions in the
+	 * permutations. 
+	 * 23 -> 123, 213, 231 
+	 * 32 -> 132, 312, 321
 	 */
 
 	public static void permutation(String str) {
 		permutation("", str);
 	}
 
+	/**
+	 * a, bc
+	 * ab, c
+	 * abc, ""
+	 * 
+	 * a, cb
+	 * ac, b
+	 * acb, ""
+	 * 
+	 * b, ac
+	 * ba, c
+	 * bac , ""
+	 * 
+	 * b, ca
+	 * bc, a
+	 * bca , ""
+	 * 
+	 * c, ab
+	 * ca, b
+	 * cab, ""
+	 * 
+	 * c, ba
+	 * cb, a
+	 * cba
+	 * 
+	 */
 	private static void permutation(String prefix, String str) {
 		int n = str.length();
 		if (n == 0)

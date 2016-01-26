@@ -16,8 +16,8 @@ public class BinaryToDecimal {
 			if (number == 0) {
 				break;
 			} else {
-				int temp = number % 2;
-				decimal += temp * Math.pow(2, power);
+				int remainder = number % 2;
+				decimal += remainder * Math.pow(2, power);
 				number = number / 10;
 				power++;
 			}
