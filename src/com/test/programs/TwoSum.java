@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class TwoSum {
 
-	private static int[] array = new int[] { 11, 7, 11, 15 };
+	private static int[] array = new int[] { 2, 6, 4, 3 };
 
-	private static int target = 22;
+	private static int target = 5;
 
 	public static void main(String[] args) {
 
@@ -27,7 +27,7 @@ public class TwoSum {
 		System.out.println(index1);
 		System.out.println(index2);
 
-		int[] returnedArray = twoSum(array, target);
+		int[] returnedArray = getTwoSum(array, target);
 		for (int i = 0; i < returnedArray.length; i++) {
 			System.out.print(returnedArray[i] + ",,");
 		}
@@ -50,4 +50,20 @@ public class TwoSum {
 		return result;
 	}
 
+	public static int[] getTwoSum(int[] numbers, int target) {
+		Map<Integer, Integer> map = new HashMap<>();
+		int[] result = new int[2];
+
+		for (int i = 0; i < numbers.length; i++) {
+			if (map.containsKey(target - numbers[i])) {
+				int index = map.get(target - numbers[i]);
+				result[0] = index + 1;
+				result[1] = i + 1;
+				break;
+			} else {
+				map.put(numbers[i], i);
+			}
+		}
+		return result;
+	}
 }

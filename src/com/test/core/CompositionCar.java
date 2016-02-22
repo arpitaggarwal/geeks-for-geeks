@@ -5,6 +5,16 @@ public class CompositionCar {
 	private int year;
 	private Engine engine;
 
+	/**
+	 * Composition has the befit of inversion of control, and its dependency can
+	 * be injected dynamically, as is shown in decorator pattern and proxy
+	 * pattern.
+	 * 
+	 * If there is no real world hierarchical relationship exists between two
+	 * entities, don't use inheritance instead prefer using composition.
+	 * Composition represents "HAS A" relationship.
+	 * 
+	 */
 	public CompositionCar(String make, int year, int engineCapacity,
 			int engineSerialNumber) {
 		this.make = make;

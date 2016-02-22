@@ -13,6 +13,7 @@ public class BaseClass implements BaseInterface{
 	public void hello(){
 		System.out.println("hello");
 	}
+	
 	@Override
 	public void welcome() {
 		// TODO Auto-generated method stub

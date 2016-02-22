@@ -23,7 +23,7 @@ public class SortMapOnValues {
 
 		map.forEach(consumer);
 
-		System.out.println("Map after sorting on values using TreeMap");
+		System.out.println("Map after sorting on keys using TreeMap");
 		Map<Integer, String> treeMapSort = new TreeMap<>(map);
 		treeMapSort.forEach(consumer);
 

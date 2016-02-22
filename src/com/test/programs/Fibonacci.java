@@ -7,6 +7,8 @@ public class Fibonacci {
 		for (int i = 0; i < 10; i++) {
 			System.out.print(fibonacci(i) + " , ");
 		}
+		System.out.println("\nFibonacci without recursion");
+		calculateFibonacci();
 	}
 
 	/** 
@@ -23,7 +25,7 @@ public class Fibonacci {
 		else if (n == 1)
 			return 1;
 		else
-			return fibonacci(n - 1) + fibonacci(n - 2);
+			return fibonacci(n - 2) + fibonacci(n - 1);
 	}
 	
 	public static void calculateFibonacci() {

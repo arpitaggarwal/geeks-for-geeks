@@ -10,6 +10,10 @@ public class WeakHashMapExample {
 		// Created HashMap and WeakHashMap objects
 
 		Map<String, String> hashmapObject = new HashMap<>();
+
+		/**
+		 * Hash table based implementation of the Map interface, with weak keys
+		 */
 		Map<String, String> weakhashmapObject = new WeakHashMap<>();
 
 		// Created HashMap and WeakHashMap keys

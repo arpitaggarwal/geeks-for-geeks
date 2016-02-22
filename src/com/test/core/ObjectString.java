@@ -7,7 +7,7 @@ public class ObjectString {
 		ObjectString object = new ObjectString();
 		object.get("hello");
 		Object obj = new Object();
-		// isPalindrom.getString(obj); //Compile Time Error
+	//	object.getString(obj); //Compile Time Error
 	}
 
 	public void get(Object str) {

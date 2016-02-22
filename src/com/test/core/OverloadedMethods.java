@@ -13,6 +13,8 @@ public class OverloadedMethods {
 	 * As Object is on higher level than Integer, it is called once Integer is
 	 * commented. And as String and Integer are on same level, compiler will
 	 * complain about Ambiguous methods.
+	 * 
+	 * Not applicable on primitives as they can't accept null.
 	 */
 	public static void main(String[] args) {
 		OverloadedMethods obj = new OverloadedMethods();

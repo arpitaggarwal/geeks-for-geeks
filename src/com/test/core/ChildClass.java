@@ -17,5 +17,14 @@ public class ChildClass extends BaseClass implements Cloneable {
 		childClass.hello();
 		ChildClass childClassNew = new ChildClass("");
 		System.out.println(childClassNew.clone() == childClassNew);
+		
+	}
+
+	// We can throw RuntimeExceptions from Child class even Parent class method
+	// is not throwing any exception.
+	@Override
+	public void hello() throws IllegalArgumentException {
+		System.out.println("hello");
+		
 	}
 }

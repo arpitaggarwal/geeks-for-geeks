@@ -7,7 +7,8 @@ import java.util.Map;
 /**
  * The LRU cache is a hash table of keys and double linked nodes. The hash table
  * makes the time of get() to be O(1). The list of double linked nodes make the
- * nodes adding/removal operations O(1).
+ * nodes adding/removal operations O(1). Key is an Integer and Value Doubly
+ * Linked list.
  * 
  * http://www.programcreek.com/2013/03/leetcode-lru-cache-java/
  */
@@ -24,19 +25,18 @@ public class LRUCache<K, V> {
 		this.capacity = capacity;
 	}
 
-	Map<K, V> cache = new LinkedHashMap<K,V>(initialCapacity, loadFactor, true) {
+	Map<K, V> cache = new LinkedHashMap<K, V>(initialCapacity, loadFactor, true) {
 		/**
 		 * 
 		 */
 		private static final long serialVersionUID = 1L;
 
-		//@Override
-		protected boolean removeEldestEntry(java.util.Map.Entry<K,V> eldest) {
+		// @Override
+		protected boolean removeEldestEntry(java.util.Map.Entry<K, V> eldest) {
 			boolean remove = this.size() > capacity;
-				return remove;
-			}
-		};
-	
+			return remove;
+		}
+	};
 
 	/**
 	 * Get the value (will always be positive) of the key if the key exists in
