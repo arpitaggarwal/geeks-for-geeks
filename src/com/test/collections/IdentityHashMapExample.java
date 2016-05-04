@@ -25,6 +25,8 @@ public class IdentityHashMapExample {
 		String str1 = new String("abc");
 		System.out.println(str.hashCode() + " ,, " + str1.hashCode() + " ,, "
 				+ "".hashCode());
+		//hash code same , but not equal
+		System.out.println(str == str1);
 		identityMap.put(str, "bravia");
 		identityMap.put(str1, "mobile");
 

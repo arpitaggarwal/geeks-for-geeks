@@ -15,6 +15,10 @@ public class OverloadedMethods {
 	 * complain about Ambiguous methods.
 	 * 
 	 * Not applicable on primitives as they can't accept null.
+	 * 
+	 * Reference :
+	 * http://geekexplains.blogspot.in/2009/06/choosing-most-specific
+	 * -method-tricky.html
 	 */
 	public static void main(String[] args) {
 		OverloadedMethods obj = new OverloadedMethods();
@@ -25,9 +29,10 @@ public class OverloadedMethods {
 		System.out.println("String called");
 	}
 
-	/*public void get(Integer a, Integer b) {
-		System.out.println("Integer called");
-	}*/
+	/*
+	 * public void get(Integer a, Integer b) {
+	 * System.out.println("Integer called"); }
+	 */
 
 	public void get(int a, int b) {
 		System.out.println("Primitive called");
