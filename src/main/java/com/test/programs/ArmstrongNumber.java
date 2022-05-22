@@ -1,8 +1,5 @@
 package com.test.programs;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 public class ArmstrongNumber {
 	public static void main(String a[]) {
 		ArmstrongNumber man = new ArmstrongNumber();
